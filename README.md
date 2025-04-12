@@ -15,3 +15,4 @@ Prosty serwis API w Flasku z regułą decyzyjną.
 ```bash
 docker build -t flask-predict-api .
 docker run -p 5000:5000 flask-predict-api
+# flask-predict-api
