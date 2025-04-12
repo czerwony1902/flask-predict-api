@@ -6,12 +6,12 @@ app = Flask(__name__)
 def predict():
     try:
         liczba1 = float(request.args.get('liczba1', 0))
-        liczba2 = float(request.args.get('liczba', 0))
+        liczba2 = float(request.args.get('liczba2', 0))
     except ValueError:
         return jsonify({"Błąd": "Źle wprowadzona liczba."}), 400
 
     suma = liczba1 + liczba2
-    prediction = 1 if sumal > 5.8 else 0
+    prediction = 1 if suma > 5.8 else 0
 
     return jsonify({
         "prediction": prediction,
