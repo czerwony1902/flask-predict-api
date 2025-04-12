@@ -5,20 +5,20 @@ app = Flask(__name__)
 @app.route('/api/v1.0/predict', methods=['GET'])
 def predict():
     try:
-        num1 = float(request.args.get('num1', 0))
-        num2 = float(request.args.get('num2', 0))
+        liczba1 = float(request.args.get('liczba1', 0))
+        liczba2 = float(request.args.get('liczba', 0))
     except ValueError:
-        return jsonify({"error": "Invalid input. Please provide valid numbers."}), 400
+        return jsonify({"Błąd": "Źle wprowadzona liczba."}), 400
 
-    total = num1 + num2
-    prediction = 1 if total > 5.8 else 0
+    suma = liczba1 + liczba2
+    prediction = 1 if sumal > 5.8 else 0
 
     return jsonify({
         "prediction": prediction,
         "features": {
-            "num1": num1,
-            "num2": num2,
-            "sum": total
+            "liczba1": liczba1,
+            "liczba2": liczba2,
+            "suma": suma
         }
     })
 

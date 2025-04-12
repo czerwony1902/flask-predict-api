@@ -7,7 +7,7 @@ Prosty serwis API w Flasku z regułą decyzyjną.
 `GET /api/v1.0/predict?num1=1.2&num2=4.7`
 
 ## Logika:
-- Jeśli suma num1 i num2 > 5.8 → predykcja = 1
+- Jeśli suma liczba1 i liczba2 > 5.8 → predykcja = 1
 - W przeciwnym razie → predykcja = 0
 
 ## Uruchomienie w Dockerze
